@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #fff;
+  background:#FAFAFA;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #d4d4d4;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 8px;
+  border: 3px solid #d4d4d4;  
+}
+.active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: -1;
+  height: 50px;
+  background-image: url('/img/news/triangle.svg');
+}
+.activeGive {
+  background-color: #774299;
+}
+.activeGive::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -35px;
+  width: 35px;
+  /* z-index: -1; */
+  height: 35px;
+  background-image: url('/img/career/triangleBottom.svg');
+  background-repeat: no-repeat;
+}
